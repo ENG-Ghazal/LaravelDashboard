@@ -1,0 +1,10 @@
+.controlColor{
+   background-color: #2A3F54;
+}
+.controlColor:hover{
+    background-color: #1ABB9C;
+}
+.noBorder{
+    border: none;
+}
+
