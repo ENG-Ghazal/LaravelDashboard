@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('client_side/index');
 });
 
+// Health check route for Railway
+Route::get('/health', function () {
+    return response()->json(['status' => 'ok', 'timestamp' => now()]);
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
