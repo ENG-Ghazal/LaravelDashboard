@@ -14,12 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('client_side/index');
+    return 'Laravel Dashboard is running!';
 });
 
 // Health check route for Railway
 Route::get('/health', function () {
-    return response()->json(['status' => 'ok', 'timestamp' => now()]);
+    return response()->json(['status' => 'ok', 'timestamp' => date('Y-m-d H:i:s')]);
 });
 
 Route::get('/dashboard', function () {
