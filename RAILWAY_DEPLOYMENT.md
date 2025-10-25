@@ -13,8 +13,8 @@ In your Railway project dashboard, add these environment variables:
 APP_NAME=LaravelDashboard
 APP_ENV=production
 APP_DEBUG=false
-APP_URL=https://your-app-name.railway.app
-APP_KEY=base64:your-generated-key-here
+APP_URL=laraveldashboard-production-8b0c.up.railway.app
+APP_KEY=base64:IR8ZXDVb0rYICQRnBBoYHTMxPeZE0zC5FNWnCUq1DLg=
 
 DB_CONNECTION=pgsql
 DB_HOST=your-postgres-host
