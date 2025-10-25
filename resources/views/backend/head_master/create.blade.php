@@ -6,7 +6,7 @@
 <div>
     <hr>
 </div>
-<form  action="{{ route('head-master.create') }}"
+<form  action="{{ route('head-master.store') }}"
      method="post" enctype="multipart/form-data"   autocomplete="false">
     @csrf
 

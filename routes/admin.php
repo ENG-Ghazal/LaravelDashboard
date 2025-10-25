@@ -17,7 +17,7 @@ Route::group(['prefix' => 'dashboard'], function () {
     ->name('head-master.create');
     //route to add headmaster
     Route::post('head-master/create','App\Http\Controllers\Backend\HeadMasterController@store')
-    ->name('head-master.create');
+    ->name('head-master.store');
 
     //route to edit head master
     Route::get('head-master/edit/{id}','App\Http\Controllers\Backend\HeadMasterController@edit')
