@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return 'Laravel Dashboard is running!';
-});
-
-// Health check route for Railway
+// Health check route for Railway (must be first)
 Route::get('/health', function () {
     return response()->json(['status' => 'ok', 'timestamp' => date('Y-m-d H:i:s')]);
+});
+
+Route::get('/', function () {
+    return 'Laravel Dashboard is running!';
 });
 
 Route::get('/dashboard', function () {
