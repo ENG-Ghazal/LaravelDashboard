@@ -1,1 +1,1 @@
-web: composer install --no-dev--optimize-autoloader && php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=${PORT:-8000}
+web: composer install --no-dev --optimize-autoloader && php artisan migrate --force && php artisan config:cache && php artisan route:cache && php -S 0.0.0.0:${PORT:-8080} -t public
