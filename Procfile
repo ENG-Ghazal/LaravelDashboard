@@ -1,1 +1,1 @@
-web: composer install --no-dev --optimize-autoloader && php artisan config:clear && php artisan config:cache && php artisan migrate --force && php -S 0.0.0.0:${PORT:-8080} -t public
+web: composer install --no-dev --optimize-autoloader && php artisan config:clear && php artisan config:cache && php -S 0.0.0.0:${PORT:-8080} -t public
