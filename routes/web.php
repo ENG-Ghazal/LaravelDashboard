@@ -13,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Health check route for Railway (must be first)
-Route::get('/health', function () {
-    return response()->json(['status' => 'ok', 'timestamp' => date('Y-m-d H:i:s')]);
-});
 
 Route::get('/', function () {
     return 'Laravel Dashboard is running!';
@@ -27,3 +23,9 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+// Health check route for Railway (must be first)
+Route::get('/health', function () {
+    return response()->json(['status' => 'ok'], 200); 
+});
+
