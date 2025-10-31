@@ -12,7 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// Health check route for Railway (must be first)
+Route::get('/health', function () {
+    return response()->json(['status' => 'ok'], 200); 
+});
 
 Route::get('/', function () {
     return 'Laravel Dashboard is running!';
@@ -24,8 +27,5 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-// Health check route for Railway (must be first)
-Route::get('/health', function () {
-    return response()->json(['status' => 'ok'], 200); 
-});
+
 
