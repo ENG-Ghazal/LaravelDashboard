@@ -1,1 +1,1 @@
-web: composer install --no-dev --optimize-autoloader && php artisan config:clear && php artisan config:cache
+web: php artisan serve --host=0.0.0 --port=${PORT}
