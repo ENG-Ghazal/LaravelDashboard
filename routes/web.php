@@ -18,7 +18,7 @@ Route::get('/health', function () {
 });
 
 Route::get('/', function () {
-    return 'Laravel Dashboard is running!';
+    return view('welcome');
 });
 
 Route::get('/dashboard', function () {
