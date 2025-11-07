@@ -16,7 +16,7 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && rm composer-setup.php
 
 
-RUN chmod -R 775 storage bootstrap/cache
+RUN chown -R www-data:www-data storage bootstrap/cache && chmod -R 775 storage bootstrap/cache
 
 
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
@@ -24,4 +24,5 @@ COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 8080
 
-CMD service nginx start && php-fpm
+
+CMD ["sh", "-c", "php-fpm -D && nginx -g 'daemon off;'"]
